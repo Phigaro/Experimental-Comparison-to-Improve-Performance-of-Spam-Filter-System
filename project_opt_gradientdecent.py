@@ -203,6 +203,7 @@ for i in range(20):
         f.write(str(f1_score))
         if (epoch+1) != epochsNum:
             f.write(", ")
+        print "Current Trial : " + str(i+1)
         print('Epoch: {}, Test Loss: {:.3}, Test Acc: {:.3}, TP: {} TN: {} FP: {} FN: {}'.format(epoch+1, temp_test_loss, temp_test_acc, tp, tn, fp, fn))
         print('Epoch: {}, TPR: {:.3}, FPR: {:.3}, Recall: {:.3} Precision: {:.3} f1_score: {:.3}\n'.format(epoch+1, tpr, fpr, recall, precision, f1_score))
     i += 1

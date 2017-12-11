@@ -162,6 +162,7 @@ test_accuracy = []
 # Start training
 i = 0
 for i in range(20):
+    print "Current Trial : " + str(i+1)
     for epoch in range(epochs):
 
         # Shuffle training data

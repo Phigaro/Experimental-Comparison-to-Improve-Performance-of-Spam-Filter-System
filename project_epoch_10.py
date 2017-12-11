@@ -30,7 +30,7 @@ learning_rate = 0.0005
 dropout_keep_prob = tf.placeholder(tf.float32)
 
 output_dir = "output"
-output_name = "Default.txt"
+output_name = "output_epoch_10.txt"
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 f = open(output_dir + "/" +output_name, 'w')
@@ -162,6 +162,7 @@ test_accuracy = []
 # Start training
 i = 0
 for i in range(20):
+    print "Current Trial : " + str(i+1)
     for epoch in range(epochs):
 
         # Shuffle training data
