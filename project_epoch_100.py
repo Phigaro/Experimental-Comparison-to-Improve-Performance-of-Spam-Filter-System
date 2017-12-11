@@ -14,6 +14,8 @@ from zipfile import ZipFile
 from tensorflow.python.framework import ops
 ops.reset_default_graph()
 
+TrialCount = 20
+
 # Start a graph
 sess = tf.Session()
 
@@ -161,7 +163,7 @@ test_accuracy = []
 
 # Start training
 i = 0
-for i in range(20):
+for i in range(TrialCount):
     print "Current Trial : " + str(i+1)
     for epoch in range(epochs):
 
